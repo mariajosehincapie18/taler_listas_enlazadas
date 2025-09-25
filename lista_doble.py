@@ -67,7 +67,7 @@ class DoublyLinkedList:
   def tail(self,newTail):
     if newTail is not None and not isinstance(newTail,Node):
       raise TypeError("Tail debe ser un objeto tipo nodo ó None")
-    self.__head = newTail
+    self.__tail = newTail
 
   @property
   def size(self):

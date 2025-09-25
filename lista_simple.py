@@ -42,10 +42,22 @@ class LinkedList:
   @property
   def head(self):
     return self.__head
+  
+  @head.setter
+  def head(self, newHead):
+    if newHead is not None and not isinstance(newHead,Node):
+      raise TypeError("Head debe ser un objeto tipo nodo ó None")
+    self.__head = newHead
 
   @property
   def tail(self):
     return self.__tail
+  
+  @tail.setter
+  def tail(self,newTail):
+    if newTail is not None and not isinstance(newTail,Node):
+      raise TypeError("Tail debe ser un objeto tipo nodo ó None")
+    self.__tail = newTail
 
   @property
   def size(self):
