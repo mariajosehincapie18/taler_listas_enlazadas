@@ -199,3 +199,8 @@ class DoublyLinkedList:
       self.__size -= 1
       poppednode.prev = None
       return poppednode
+    
+  def generate(self, n, minvalue, maxvalue):
+    for i in range(n):
+      self.append(random.randint(minvalue, maxvalue))
+    return self
